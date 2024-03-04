@@ -3,41 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Eudes Machado</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="Sobre.html">Sobre</a>
-            <a href="Experiencia.html">Experiência</a>
-            <!--<a href="Conhecimento.html">Conhecimentos</a>-->
-            <a href="Contato.html">Contatos</a>            
-        </nav>
+    <nav>
+        <div class="nav-logo">
+            <a href="#">
+                <img src="images/logoo.png">
+            </a>
+        </div>
+
+        <ul class="nav-links">
+            <li class="link"><a href="#">Home</a></li>            
+            <li id="link1" class="link"><a href="#">Conhecimento</a></li>
+            <li id="link2" class="link"><a href="#">Experiencia</a></li>
+            <li id="link3" class="link"><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <header class="container">
+        <div class="content">
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <h4>Criei esse site para mostra um pouco sobre mim</h4>
+            <H1>Oi eu sou <span>Eudes Machado</span>, Desenvolvedor FullStack</H1>
+            <p>
+                Heterossexual, pardo, sou graduado em Sistema da Informação. 
+                Gosto de estudar sobre novas tendencias tecnológicas e os benefícios 
+                que as boas práticas trazem para o setor executivo e líderes de 
+                tecnologia e que os recursos digitais auxiliam empresas a prosperar 
+                e resolver desafios comuns de negócios.
+            </p>
+        </div>
+        <div class="image">
+            <img src="images/img3.png">
+        </div>
     </header>
 
-    <!-- carousel -->
-    <div class="carousel">
-        <!-- list item -->
-        <div class="list">
-            <div class="item">
-                <img src="image/img3.png">
+    <section class="container">
+        <h2 class="header">Conhecimento</h2>
+        <div class="features">
+            <div class="card">
+                <img src="images/sap.png" alt="">
+                <h4>SAP</h4>
+                <p>
+                    Fazer análise, configuração e desenvolvimento de sistema 
+                    informatizado abrangendo as várias áreas de negócio da empresa, 
+                    conforme métodos previamente estabelecidos. Busca soluções informatizadas 
+                    que visem à melhoria de processo. Documenta conforme governança da área de TI. 
+                    Orienta usuários para melhor operação dos sistemas. Atua sobre incidentes, 
+                    visando a estabilidade da operação.
+                </p>                
+            </div>
+            <div class="card">
+                <img src="images/java.jpg" alt="">
+                <i class="fa-brands fa-java"></i>
+                <h4>Java</h4>
+                <p>
+                    Conceitos básicos e terminologia, Classes, pacotes, objetos, atributos, 
+                    métodos, construtores, sobrecarga, Fundamentos das classes, Polimorfismo,
+                    ligação dinâmica e tratamento de exceções
+                </p>
+            </div>
+            <div class="card">
+                <img src="images/salesforce.png" alt="">
+                <h4>SalesForce</h4>
+                <p>
+                    Navegação SalesForce, Modelagem de Dados, Personalização Lightning, 
+                    Formulas e Validações, Gerenciamento de Dados, Relatórios e Painéis, 
+                    Segurança de Dados, Automações, Apex, Aura Components.
+                </p>
+            </div>
+            <div class="card">
+                <img src="images/hcj.jpg" alt="">
+                <h4>HTML & CSS e JS</h4>
+                <p>
+                    A maneira certa e usando boas práticas da web, estruturando o código 
+                    para legibilidade e layouts verdadeiramente interessantes, com uso de 
+                    bibliotecas e ferramentas. Sites responsivos, bootstrap, grid e 
+                    flexbox.
+                </p>
+            </div>
+            <div class="card">
+                <img src="images/hcj.jpg" alt="">
+                <h4>Suporte</h4>
+                <p>
+                    Gestão de hardware e software, gestão de acesso, suporte técnico, 
+                    programação de software, manutenção de banco de dados, criação de 
+                    políticas de segurança, rotinas de backup
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="header">Experiencia</h2>
+        <p class="sub-header">
+            Aqui está um pouco da minha vida profissional 
+        </p>
+        <div class="pricing">
+            <div class="card">
                 <div class="content">
-                    <div class="author">Olá! eu sou</div>
-                    <div class="title">Eudes Machado</div>
-                    <div class="topic">Analista de Sistemas</div>
-                    <div class="des">
-                        <!-- Introdução sobre o portfolio-->
-                        <p>Portfolio criado com intuito de mostrar um pouco sobre minha vida proficional, e sobre os meus
-                        conhecimentos e experiências até o momento da minha vida.</p>
-                    </div>                    
+                    <h4>ICL America do Sul S/A</h4>
+                    <h3>Analista de Sistema</h3>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        SAP (SD, MM e Basis)
+                    </p>
                 </div>
             </div>
-        </div>    
-        <div class="time"></div>
+            <div class="card">
+                <div class="content">
+                    <h4>Compass Minerals America do Sul S/A</h4>
+                    <h3>Analista de Suporte</h3>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Coordenação da equipe de campo
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Gestão de acessos
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Níveis de serviço contratados e Reports
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Manutenção e ou implementação de projetos de software (s) 
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Monitoramento e configuração de servidores 
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Gestão de Acessos e Backup 
+                    </p>
+                </div>               
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h4>Silma Eletronica</h4>
+                    <h3>Técnico de Manutenção</h3>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Manutenção de Micro-computdores
+                    </p>
+                    <p>
+                        <i class="ri-checkbox-circle-line"></i>
+                        Configuração e manutenção de sistemas
+                    </p>                    
+            </div>
+        </div>
+    </section>
+
+    <footer class="container">
+        <span class="blur"></span>
+        <span class="blur"></span>
+        <div class="column">
+            <div class="logo">
+                <img src="images/logoo.png">
+            </div>
+            <!--<div class="socials">
+                <a href="#"><i class="ri-youtube-line"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+            </div> -->
+        </div>
+        
+        <div class="column">
+            <h4>Contatos</h4>
+            <a href="https://linkedin.com/in/eudessmachado">Linkedin</a>
+            <a href="https://github.com/eudessm">GitHub</a>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        Copyright © 2024 Eudessm. Todos os direitos resevados.
     </div>
 
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
