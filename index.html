@@ -3,188 +3,355 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Eudes Machado</title>
+    <title>Eudes Machado Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script src="js/tailwind.config.js"></script>
+<script type="importmap">
+{
+    "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.34.0"
+}
+}
+</script>
+<link rel="stylesheet" href="/index.css">
 </head>
-<body>
-    <nav>
-        <div class="nav-logo">
-            <a href="#">
-                <img src="images/logoo.png">
-            </a>
+<body class="bg-gradient-to-br from-[#1a3c20] via-[#2e5c35] to-[#122e16] text-white font-poppins relative overflow-x-hidden selection:bg-white selection:text-coc-green">
+
+    <!-- Navbar -->
+    <nav class="w-full flex justify-between items-center px-6 py-6 md:px-12 lg:px-24 absolute top-0 left-0 z-50">
+        <div class="reveal-left text-2xl md:text-3xl font-bold tracking-tighter font-marker uppercase cursor-pointer text-white drop-shadow-md">
+            EUDES.DEV
         </div>
 
-        <ul class="nav-links">
-            <li class="link"><a href="#">Home</a></li>            
-            <li id="link1" class="link"><a href="#">Conhecimento</a></li>
-            <li id="link2" class="link"><a href="#">Experiencia</a></li>
-            <li id="link3" class="link"><a href="#">Contato</a></li>
+        <!-- Desktop Menu -->
+        <ul class="reveal hidden md:flex space-x-8 text-sm font-medium">
+            <li><a href="#home" class="hover:text-green-200 transition-colors duration-300">Home</a></li>
+            <li><a href="#experience" class="hover:text-green-200 transition-colors duration-300">Experiência</a></li>
+            <li><a href="#education" class="hover:text-green-200 transition-colors duration-300">Formação</a></li>
+            <li><a href="#skills" class="hover:text-green-200 transition-colors duration-300">Conhecimentos</a></li>
+            <li><a href="#contact" class="hover:text-green-200 transition-colors duration-300">Contato</a></li>
         </ul>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden z-50">
+            <button id="menu-btn" type="button" class="text-white focus:outline-none" aria-label="Abrir menu de navegação">
+                <i data-lucide="menu" id="menu-icon" width="32" height="32"></i>
+            </button>
+        </div>
     </nav>
 
-    <header class="container">
-        <div class="content">
-            <span class="blur"></span>
-            <span class="blur"></span>
-            <h4>Criei esse site para mostra um pouco sobre mim</h4>
-            <H1>Oi eu sou <span>Eudes Machado</span>, Desenvolvedor FullStack</H1>
-            <p>
-                Heterossexual, pardo, sou graduado em Sistema da Informação. 
-                Gosto de estudar sobre novas tendencias tecnológicas e os benefícios 
-                que as boas práticas trazem para o setor executivo e líderes de 
-                tecnologia e que os recursos digitais auxiliam empresas a prosperar 
-                e resolver desafios comuns de negócios.
-            </p>
-        </div>
-        <div class="image">
-            <img src="images/img3.png">
-        </div>
-    </header>
-
-    <section class="container">
-        <h2 class="header">Conhecimento</h2>
-        <div class="features">
-            <div class="card">
-                <img src="images/sap.png" alt="">
-                <h4>SAP</h4>
-                <p>
-                    Fazer análise, configuração e desenvolvimento de sistema 
-                    informatizado abrangendo as várias áreas de negócio da empresa, 
-                    conforme métodos previamente estabelecidos. Busca soluções informatizadas 
-                    que visem à melhoria de processo. Documenta conforme governança da área de TI. 
-                    Orienta usuários para melhor operação dos sistemas. Atua sobre incidentes, 
-                    visando a estabilidade da operação.
-                </p>                
-            </div>
-            <div class="card">
-                <img src="images/java.jpg" alt="">
-                <i class="fa-brands fa-java"></i>
-                <h4>Java</h4>
-                <p>
-                    Conceitos básicos e terminologia, Classes, pacotes, objetos, atributos, 
-                    métodos, construtores, sobrecarga, Fundamentos das classes, Polimorfismo,
-                    ligação dinâmica e tratamento de exceções
-                </p>
-            </div>
-            <div class="card">
-                <img src="images/salesforce.png" alt="">
-                <h4>SalesForce</h4>
-                <p>
-                    Navegação SalesForce, Modelagem de Dados, Personalização Lightning, 
-                    Formulas e Validações, Gerenciamento de Dados, Relatórios e Painéis, 
-                    Segurança de Dados, Automações, Apex, Aura Components.
-                </p>
-            </div>
-            <div class="card">
-                <img src="images/hcj.jpg" alt="">
-                <h4>HTML & CSS e JS</h4>
-                <p>
-                    A maneira certa e usando boas práticas da web, estruturando o código 
-                    para legibilidade e layouts verdadeiramente interessantes, com uso de 
-                    bibliotecas e ferramentas. Sites responsivos, bootstrap, grid e 
-                    flexbox.
-                </p>
-            </div>
-            <div class="card">
-                <img src="images/hcj.jpg" alt="">
-                <h4>Suporte</h4>
-                <p>
-                    Gestão de hardware e software, gestão de acesso, suporte técnico, 
-                    programação de software, manutenção de banco de dados, criação de 
-                    políticas de segurança, rotinas de backup
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="container">
-        <h2 class="header">Experiencia</h2>
-        <p class="sub-header">
-            Aqui está um pouco da minha vida profissional 
-        </p>
-        <div class="pricing">
-            <div class="card">
-                <div class="content">
-                    <h4>ICL America do Sul S/A</h4>
-                    <h3>Analista de Sistema</h3>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        SAP (SD, MM e Basis)
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                    <h4>Compass Minerals America do Sul S/A</h4>
-                    <h3>Analista de Suporte</h3>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Coordenação da equipe de campo
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Gestão de acessos
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Níveis de serviço contratados e Reports
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Manutenção e ou implementação de projetos de software (s) 
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Monitoramento e configuração de servidores 
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Gestão de Acessos e Backup 
-                    </p>
-                </div>               
-            </div>
-            <div class="card">
-                <div class="content">
-                    <h4>Silma Eletronica</h4>
-                    <h3>Técnico de Manutenção</h3>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Manutenção de Micro-computdores
-                    </p>
-                    <p>
-                        <i class="ri-checkbox-circle-line"></i>
-                        Configuração e manutenção de sistemas
-                    </p>                    
-            </div>
-        </div>
-    </section>
-
-    <footer class="container">
-        <span class="blur"></span>
-        <span class="blur"></span>
-        <div class="column">
-            <div class="logo">
-                <img src="images/logoo.png">
-            </div>
-            <!--<div class="socials">
-                <a href="#"><i class="ri-youtube-line"></i></a>
-                <a href="#"><i class="ri-instagram-line"></i></a>
-            </div> -->
-        </div>
-        
-        <div class="column">
-            <h4>Contatos</h4>
-            <a href="https://linkedin.com/in/eudessmachado">Linkedin</a>
-            <a href="https://github.com/eudessm">GitHub</a>
-        </div>
-    </footer>
-
-    <div class="copyright">
-        Copyright © 2024 Eudessm. Todos os direitos resevados.
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#38703d]/95 backdrop-blur-md flex flex-col justify-center items-center z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <ul class="flex flex-col space-y-8 text-center text-2xl font-bold">
+            <li><a href="#home" class="mobile-link hover:text-green-300 transition-colors text-white">Home</a></li>
+            <li><a href="#experience" class="mobile-link hover:text-green-300 transition-colors text-white">Experiência</a></li>
+            <li><a href="#education" class="mobile-link hover:text-green-300 transition-colors text-white">Formação</a></li>
+            <li><a href="#skills" class="mobile-link hover:text-green-300 transition-colors text-white">Conhecimentos</a></li>
+            <li><a href="#contact" class="mobile-link hover:text-green-300 transition-colors text-white">Contato</a></li>
+        </ul>
     </div>
 
-    <script src="script.js"></script>
-</body>
+    <!-- Social Sidebar -->
+    <div class="hidden md:flex fixed left-6 top-1/2 transform -translate-y-1/2 flex-col gap-6 z-40 reveal-left delay-500">
+        <div class="w-[1px] h-20 bg-white/30 mx-auto mb-2"></div>
+        <a href="https://linkedin.com/in/eudessmachado" target="_blank" aria-label="Visite meu LinkedIn" class="text-white/70 hover:text-white hover:scale-110 transition-all duration-300 bg-black/10 p-2 rounded-full backdrop-blur-sm"><i data-lucide="linkedin" width="20"></i></a>
+        <a href="https://github.com/eudessm" target="_blank" aria-label="Visite meu GitHub" class="text-white/70 hover:text-white hover:scale-110 transition-all duration-300 bg-black/10 p-2 rounded-full backdrop-blur-sm"><i data-lucide="github" width="20"></i></a>
+        <a href="mailto:eudesmare@gmail.com" aria-label="Enviar email para eudesmare@gmail.com" class="text-white/70 hover:text-white hover:scale-110 transition-all duration-300 bg-black/10 p-2 rounded-full backdrop-blur-sm"><i data-lucide="mail" width="20"></i></a>
+        <a href="https://wa.me/5581999950376" target="_blank" aria-label="Contate-me pelo WhatsApp" class="text-white/70 hover:text-white hover:scale-110 transition-all duration-300 bg-black/10 p-2 rounded-full backdrop-blur-sm"><i data-lucide="message-circle" width="20"></i></a>
+        <div class="w-[1px] h-20 bg-white/30 mx-auto mt-2"></div>
+    </div>
 
+    <main class="relative w-full h-full">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen w-full flex flex-col md:flex-row items-center justify-center px-6 md:px-12 lg:px-24 pt-24 md:pt-0 overflow-hidden relative">
+            <!-- Left Content -->
+            <div id="hero-text" class="w-full md:w-1/2 flex flex-col justify-center items-start z-10 space-y-6 md:pl-16 relative">
+                <div class="reveal-left active">
+                    <span class="text-sm font-semibold tracking-[0.2em] uppercase text-green-200 mb-2 block">Analista e Desenvolvedor</span>
+                    <h4 class="text-xl md:text-2xl font-medium mb-0">Eudes S. Machado</h4>
+                    <h1 class="text-[5rem] sm:text-[7rem] md:text-[6rem] lg:text-[8rem] leading-none font-marker text-white drop-shadow-lg">SYSTEMS</h1>
+                </div>
+
+                <p class="reveal text-sm sm:text-base md:text-lg max-w-xl leading-relaxed text-gray-100 delay-200 active">
+                    Atuando na área de Tecnologia, desenvolve ou prestando manutenção de software, e realizando processos a fim de encontrar o melhor caminho racional para que a informação possa ser processada.
+                </p>
+
+                <div class="reveal flex flex-col sm:flex-row gap-4 mt-4 delay-300 active">
+                    <a href="https://linkedin.com/in/eudessmachado" target="_blank" class="px-8 py-3 flex items-center justify-center gap-2 border-2 border-white rounded-full font-semibold hover:bg-white hover:text-[#38703d] transition-all duration-300 uppercase tracking-wider text-sm">
+                        <i data-lucide="linkedin" width="18"></i> LinkedIn
+                    </a>
+                    <a href="files/pdf/Eudes_Machado_CV.pdf" download="Eudes_Machado_CV.pdf" class="px-8 py-3 flex items-center justify-center gap-3 font-semibold hover:text-green-200 transition-colors duration-300 uppercase tracking-wider text-sm group">
+                        <div class="w-8 h-8 bg-white text-[#38703d] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="file-text" width="14" fill="currentColor"></i>
+                        </div>
+                        Baixar CV
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="w-full md:w-1/2 flex justify-center items-center relative h-[50vh] md:h-screen mt-8 md:mt-0">
+                <div id="hero-blob" class="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+                <div id="hero-image" class="relative z-20 flex justify-center items-center animate-float">
+                    <img src="https://github.com/eudessm.png" alt="Eudes S. Machado" class="w-[300px] h-[300px] md:w-[450px] md:h-[450px] object-cover rounded-full border-4 border-white/20 shadow-2xl">
+                </div>
+            </div>
+
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:flex flex-col items-center gap-2 animate-bounce">
+                <i data-lucide="mouse-pointer-2" width="24"></i>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="w-full py-20 px-6 md:px-12 lg:px-24 bg-black/10 backdrop-blur-sm">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="reveal text-4xl md:text-5xl font-marker mb-12 text-center text-white drop-shadow-md">
+                    Experiência Profissional
+                </h2>
+
+                <div class="relative border-l-4 border-white/20 ml-4 md:ml-8 space-y-12">
+                    <!-- ICL -->
+                    <div class="reveal relative pl-8 md:pl-12">
+                        <div class="absolute -left-[14px] top-1 w-6 h-6 bg-[#5ba568] border-4 border-[#2e5c35] rounded-full shadow-lg z-10"></div>
+                        <div class="bg-white/10 p-6 rounded-2xl border border-white/10 shadow-lg relative overflow-hidden group transition-all hover:scale-[1.02] hover:bg-white/15 cursor-pointer experience-card"
+                             data-video="files/videos/sap-presentation.webm"
+                             data-title="Apresentação Eudes - SAP">
+                            <div class="absolute top-4 right-4 bg-white/20 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i data-lucide="play" class="text-white fill-white" width="20"></i>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 relative z-10">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+                                        <i data-lucide="briefcase" class="text-green-300" width="20"></i> ICL América do Sul
+                                    </h3>
+                                    <span class="text-lg text-green-200 font-medium">Analista de Sistema</span>
+                                </div>
+                                <span class="text-sm font-bold bg-white/20 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">2 Anos</span>
+                            </div>
+                            <p class="text-gray-200 leading-relaxed text-sm md:text-base relative z-10">
+                                Analista SAP (PP, MM, SD, BASIS). Atendimento a incidentes, reportando problemas, planejamento e coordenação de requisições de serviço junto ao time de desenvolvimento. Realização de testes unitários e integrados. Melhorias de processos e mitigação de riscos.
+                            </p>
+                            <div class="mt-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-green-300 opacity-70 group-hover:opacity-100 transition-opacity">
+                                <i data-lucide="film" width="14"></i> Clique para ver apresentação
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Compass -->
+                    <div class="reveal relative pl-8 md:pl-12">
+                        <div class="absolute -left-[14px] top-1 w-6 h-6 bg-[#5ba568] border-4 border-[#2e5c35] rounded-full shadow-lg z-10"></div>
+                        <div class="bg-white/10 p-6 rounded-2xl border border-white/10 shadow-lg relative overflow-hidden group transition-all hover:scale-[1.02] hover:bg-white/15 cursor-pointer experience-card"
+                             data-video="files/videos/support-presentation.webm"
+                             data-title="Apresentação Eudes - Analista de Suporte">
+                            <div class="absolute top-4 right-4 bg-white/20 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i data-lucide="play" class="text-white fill-white" width="20"></i>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 relative z-10">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+                                        <i data-lucide="briefcase" class="text-green-300" width="20"></i> Compass Minerals América do Sul S/A
+                                    </h3>
+                                    <span class="text-lg text-green-200 font-medium">Analista de Suporte</span>
+                                </div>
+                                <span class="text-sm font-bold bg-white/20 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">6 Anos</span>
+                            </div>
+                            <p class="text-gray-200 leading-relaxed text-sm md:text-base relative z-10">
+                                Coordenação da equipe de campo, gestão de acessos, Reports, manutenção e implementação de projetos de software. Monitoramento de servidores, Backup, Contratos Leasing, Desenvolvedor Jr (Web).
+                            </p>
+                            <div class="mt-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-green-300 opacity-70 group-hover:opacity-100 transition-opacity">
+                                <i data-lucide="film" width="14"></i> Clique para ver apresentação
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Silma -->
+                    <div class="reveal relative pl-8 md:pl-12">
+                        <div class="absolute -left-[14px] top-1 w-6 h-6 bg-[#5ba568] border-4 border-[#2e5c35] rounded-full shadow-lg z-10"></div>
+                        <div class="bg-white/10 p-6 rounded-2xl border border-white/10 shadow-lg relative overflow-hidden group transition-all hover:scale-[1.02] hover:bg-white/15">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 relative z-10">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+                                        <i data-lucide="briefcase" class="text-green-300" width="20"></i> Silma Eletrônica
+                                    </h3>
+                                    <span class="text-lg text-green-200 font-medium">Técnico em manutenção</span>
+                                </div>
+                                <span class="text-sm font-bold bg-white/20 px-3 py-1 rounded-full mt-2 md:mt-0 w-fit">4 Anos</span>
+                            </div>
+                            <p class="text-gray-200 leading-relaxed text-sm md:text-base relative z-10">
+                                Montagem, instalação e configuração de equipamentos de informática. Manutenção preventiva e corretiva de hardware e software. Atendimento help-desk.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="w-full py-20 px-6 md:px-12 lg:px-24">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Skills Column -->
+                <div>
+                    <h2 class="reveal-left text-4xl font-marker mb-10 text-white drop-shadow-md flex items-center gap-3">
+                        Conhecimentos
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Programação -->
+                        <div class="reveal skill-card bg-white/10 p-5 rounded-xl border border-white/5 backdrop-blur-sm transition-all duration-300 hover:scale-[1.03]">
+                            <div class="flex items-center gap-3 mb-3 text-green-300">
+                                <i data-lucide="code" width="24"></i>
+                                <h3 class="font-bold text-lg">Programação</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-200">
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> Java (Polimorfismo, Classes)</li>
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> Spring Boot (Lombok, MapStruct)</li>
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> HTML, CSS e JS</li>
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> Apex, Aura Components</li>
+                            </ul>
+                        </div>
+
+                        <!-- Banco de Dados -->
+                        <div class="reveal skill-card bg-white/10 p-5 rounded-xl border border-white/5 backdrop-blur-sm transition-all duration-300 hover:scale-[1.03] delay-100">
+                            <div class="flex items-center gap-3 mb-3 text-green-300">
+                                <i data-lucide="database" width="24"></i>
+                                <h3 class="font-bold text-lg">Banco de Dados</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-200">
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> PostgreSQL</li>
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> MySQL Workbench</li>
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> SQL Workbench/J</li>
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> Modelo Relacional</li>
+                            </ul>
+                        </div>
+
+                        <!-- Sistemas -->
+                        <div class="reveal skill-card bg-white/10 p-5 rounded-xl border border-white/5 backdrop-blur-sm transition-all duration-300 hover:scale-[1.03] delay-200">
+                            <div class="flex items-center gap-3 mb-3 text-green-300">
+                                <i data-lucide="server" width="24"></i>
+                                <h3 class="font-bold text-lg">Sistemas e ERP</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-200">
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> SAP (SD, MM, Basis)</li>
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> Salesforce (Lightning, Apex)</li>
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> OutSystems</li>
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> SAP S/4HANA</li>
+                            </ul>
+                        </div>
+
+                        <!-- Infra -->
+                        <div class="reveal skill-card bg-white/10 p-5 rounded-xl border border-white/5 backdrop-blur-sm transition-all duration-300 hover:scale-[1.03] delay-300">
+                            <div class="flex items-center gap-3 mb-3 text-green-300">
+                                <i data-lucide="wrench" width="24"></i>
+                                <h3 class="font-bold text-lg">Infra e Ferramentas</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-gray-200">
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> Git/GitHub</li>
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> Intellij/Eclipse/VS Code</li>
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> Windows/macOS Server</li>
+                                <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-green-400 rounded-full"></div> Redes e Wi-Fi</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Education & Contact Column -->
+                <div class="reveal" id="education">
+                    <h2 class="text-4xl font-marker mb-10 text-white drop-shadow-md flex items-center gap-3">
+                        <i data-lucide="graduation-cap" width="36"></i> Formação
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="bg-gradient-to-r from-white/10 to-transparent p-4 rounded-lg border-l-4 border-green-400 hover:bg-white/20 transition-colors">
+                            <p class="font-medium text-white">NTT Data - Formação SAP SD (11/2025)</p>
+                        </div>
+                        <div class="bg-gradient-to-r from-white/10 to-transparent p-4 rounded-lg border-l-4 border-green-400 hover:bg-white/20 transition-colors">
+                            <p class="font-medium text-white">UNINABUCO – Bacharelado em Sistema da Informação (12/2019)</p>
+                        </div>
+                        <div class="bg-gradient-to-r from-white/10 to-transparent p-4 rounded-lg border-l-4 border-green-400 hover:bg-white/20 transition-colors">
+                            <p class="font-medium text-white">Start Capgemini – Salesforce Adm (10/2023)</p>
+                        </div>
+                        <div class="bg-gradient-to-r from-white/10 to-transparent p-4 rounded-lg border-l-4 border-green-400 hover:bg-white/20 transition-colors">
+                            <p class="font-medium text-white">CeV – Git, SQL, HTML, CSS e JS (06/2022)</p>
+                        </div>
+                        <div class="bg-gradient-to-r from-white/10 to-transparent p-4 rounded-lg border-l-4 border-green-400 hover:bg-white/20 transition-colors">
+                            <p class="font-medium text-white">Trainning Education - Analista SAP (04/2022)</p>
+                        </div>
+                         <div class="bg-gradient-to-r from-white/10 to-transparent p-4 rounded-lg border-l-4 border-green-400 hover:bg-white/20 transition-colors">
+                            <p class="font-medium text-white">DIO, BE PRO - OutSystems (06/2024)</p>
+                        </div>
+                        <div class="bg-gradient-to-r from-white/10 to-transparent p-4 rounded-lg border-l-4 border-green-400 hover:bg-white/20 transition-colors">
+                            <p class="font-medium text-white">SENAC - Técnico em Manutenção (10/2009)</p>
+                        </div>
+                    </div>
+
+                    <div id="contact" class="mt-16 bg-black/20 p-8 rounded-2xl border border-white/10">
+                        <h3 class="text-2xl font-bold mb-4">Vamos conversar?</h3>
+                        <p class="text-gray-300 mb-6">
+                            Estou disponível para novos projetos e oportunidades em presencial ou remoto.
+                        </p>
+                        <div class="flex flex-col gap-4">
+                            <a href="mailto:eudesmare@gmail.com" class="flex items-center gap-3 text-green-300 hover:text-white transition-colors font-mono group">
+                                <div class="p-2 bg-white/10 rounded-full group-hover:bg-green-500/20 transition-colors">
+                                    <i data-lucide="mail" width="18"></i>
+                                </div>
+                                eudesmare@gmail.com
+                            </a>
+                            <a href="https://wa.me/5581999950376" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-green-300 hover:text-white transition-colors font-mono group">
+                                <div class="p-2 bg-white/10 rounded-full group-hover:bg-green-500/20 transition-colors">
+                                    <i data-lucide="message-circle" width="18"></i>
+                                </div>
+                                WhatsApp: (81) 99995-0376
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="w-full py-8 text-center text-white/40 text-sm">
+            © <span id="year"></span> Eudes S. Machado. Todos os direitos reservados.
+        </footer>
+    </main>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden transition-opacity duration-300 opacity-0">
+        <div class="bg-[#1a3c20] w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl border border-white/20 transform scale-95 transition-transform duration-300" id="video-content">
+            <div class="flex justify-between items-center p-4 border-b border-white/10 bg-[#2e5c35]">
+                <h3 class="text-xl font-bold text-white flex items-center gap-2" id="modal-title">
+                   <i data-lucide="play" width="20" class="fill-white">ideo Title</i>V
+                </h3>
+                <button id="close-modal" type="button" aria-label="Fechar modal de vídeo" class="p-2 hover:bg-white/20 rounded-full transition-colors text-white">
+                    <i data-lucide="x" width="24"></i>
+                </button>
+            </div>
+            <div class="relative pt-[56.25%] bg-black">
+                <video id="modal-video" controls class="absolute top-0 left-0 w-full h-full">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script src="js/script.js"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
 </html>
